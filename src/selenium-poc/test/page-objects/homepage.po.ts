@@ -1,11 +1,11 @@
 import { driver, waitForElement } from "../common/basepage";
-import { config } from "../common/selenium.config";
 import { By } from 'selenium-webdriver';
+import { baseurl } from "../selenium.config.json";
 
 export class HomePage {
 
   async navigateTo(path) {
-    return driver.get(`${config.baseurl}/${path}`);
+    return driver.get(`${baseurl}/${path}`);
   }
 
   async getPageHeadingText() {
